@@ -12,38 +12,16 @@ from datetime import datetime
 
 x = OrderedMap()
 orderedMap = ""
-a = "Hello\nWorld"
-b = "Hello\nWorld!"
-c = "Hello\nWorld!!"
-d = "Hello\nWorld!!!"
-diff1 = StringDiff(a, b)
-diff2 = StringDiff(b, c)
-diff3 = StringDiff(c, d)
-print(StringDiff.raw_diff(a,b))
 
 class Filesystem:
     
     def time(timestamp):
         curr_dt = datetime.now()
         timestamp = int(round(curr_dt.timestamp()))
-        versions = {diff1: "version1", diff2: "version2", diff3: "version3"}
         return timestamp
 
-    def save(timestamp, versions, diff1, diff2, diff3):
-        om = OrderedMap
-        om.append(versions)
-        while True:
-            input("diff1")
-            if input == "save":
-                om.append(diff1)
-            elif input == "restore":
-                om.append(diff2)
-            elif input == "show_log":
-                print(om)
-            else:
-                print("invalid input")
+    
 
-        
 
 
 # key: timestamp
